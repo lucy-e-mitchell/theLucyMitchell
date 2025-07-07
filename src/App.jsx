@@ -52,8 +52,8 @@ export default function App() {
                 {/* D-Pad */}
                 <div className="ds-dpad">
                     <div>
-                        <div className="ds-dpad-button up" onClick={handleLeft}></div>
-                        <div className="ds-dpad-button left"></div>
+                        <div className="ds-dpad-button up" ></div>
+                        <div className="ds-dpad-button left" onClick={handleLeft}></div>
                         <div className="ds-dpad-button center"></div>
                         <div className="ds-dpad-button right" onClick={handleRight}></div>
                         <div className="ds-dpad-button down"></div>
