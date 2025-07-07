@@ -1,7 +1,7 @@
 {
   "name": "gameboy-cv",
   "version": "1.0.0",
-  "homepage": "https://lucydev.github.io/ds-cv",
+  "homepage": "https://github.com/lucy-e-mitchell/theLucyMitchell",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
