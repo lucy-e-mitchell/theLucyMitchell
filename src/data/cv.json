@@ -5,7 +5,7 @@
     "email": "lucymitchell574@gmail.com",
     "linkedin": "https://www.linkedin.com/in/lucy-mitchell-a39214234"
   },
-  "summary": "Hi! I'm a passionate and curious software engineer with 4 years of hands-on experience in full-stack and backend development. I've been lucky to grow my skills through a graduate apprenticeship while studying Software Engineering at the University of Glasgow. I love building clean, scalable backend systems in Java, working with APIs and databases, and creating practical solutions that make a difference. I'm comfortable working across the stack with tools like Angular and SQL, and I enjoy collaborating in Agile teams, mentoring juniors, and continuously learning. I'm all about writing solid code, sharing ideas, and delivering value together.",
+  "summary": "Hello! I'm a software engineer with 4 years of experience, recently finished a first-class degree in Software Engineering from the University of Glasgow. I’ve been working at Barclays through a graduate apprenticeship, mainly focused on backend development with Java—building APIs, integrating SQL databases into applications, and keeping systems clean, scalable, and reliable. I’m also comfortable across the stack with tools like Angular and TypeScript, and I work regularly with Jira, GitLab repos, and deployment pipelines. I enjoy working in Agile teams, solving real-world problems, and writing code that’s solid, practical, and maintainable.",
   "education": [
     {"qualification": "BSc (Hons) Software Engineering (First Class Honours)",
     "institution": "University of Glasgow",
@@ -32,7 +32,7 @@
   ],
   "projects": [
     {
-      "title": "Test Environment Dashboard",
+      "title": "Test Environment Dashboard [Workplace]",
       "details": [
         "Developed backend logic in Java and SQL to aggregate and expose test environment data via APIs.",
         "Built a simple frontend using Angular for visual representation, focusing on backend-first architecture.",
@@ -40,7 +40,7 @@
       ]
     },
     {
-      "title": "Automated Test Double Tool",
+      "title": "Automated Test Double Tool [Workplace]",
       "details": [
         "Led development of a backend system to simulate responses from dependent services, reducing test complexity.",
         "Built API services in Java with REST endpoints; frontend was added using Angular and TypeScript.",
@@ -48,19 +48,69 @@
       ]
     },
     {
-      "title": "Mentorship & Onboarding",
+      "title": "More to come...watch this space!",
       "details": [
-        "Provided technical onboarding, code reviews, and guidance to junior team members, improving team productivity and cohesion."
+        ""
       ]
     }
   ],
   "skills": {
-    "languages": ["Java", "SQL", "TypeScript", "HTML/CSS", "Avaloq Script"],
-    "backend": ["RESTful APIs", "SOAP", "Java services"],
-    "frontend": ["Angular", "TypeScript"],
-    "testing": ["JUnit", "Integration Testing", "Test Doubles"],
-    "tools": ["Maven", "Git", "Kubernetes", "Grafana", "Jira", "CI/CD pipelines"],
-    "practices": ["Agile (Scrum)", "Clean Code", "Code Reviews", "Mentorship"],
-    "softSkills": ["Team collaboration", "Communication", "Problem-solving", "Leadership"]
+    "languages": ["Java", "SQL", "TypeScript", "HTML/CSS", "Avaloq Script", "JavaScript", "Bash", "JSON", "XML"],
+    "backend": [
+      "RESTful APIs",
+      "SOAP",
+      "Java services",
+      "Spring Boot",
+      "Maven",
+      "Microservices Architecture",
+      "Authentication & Authorization"
+    ],
+    "frontend": [
+      "Angular",
+      "TypeScript",
+      "HTML",
+      "Responsive Design",
+      "Component-based architecture"
+    ],
+    "testing": [
+      "JUnit",
+      "Mockito",
+      "Integration Testing",
+      "Test Doubles",
+      "TDD (Test-Driven Development)",
+      "Postman (API testing)",
+      "CI-integrated testing"
+    ],
+    "tools": [
+      "Maven",
+      "Git",
+      "GitLab Repos",
+      "Kubernetes",
+      "Docker",
+      "Grafana",
+      "Jira",
+      "Confluence",
+      "CI/CD pipelines",
+      "GitLab CI"
+    ],
+    "practices": [
+      "Agile (Scrum)",
+      "Clean Code",
+      "Code Reviews",
+      "Continuous Integration",
+      "Continuous Deployment",
+      "DevOps Collaboration",
+      "Version Control (Git)",
+      "Documentation"
+    ],
+    "softSkills": [
+      "Team collaboration",
+      "Communication",
+      "Problem-solving",
+      "Adaptability",
+      "Time management",
+      "Attention to detail",
+      "Critical thinking"
+    ]
   }
 }
