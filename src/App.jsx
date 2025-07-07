@@ -16,16 +16,7 @@ export default function App() {
             setIsMobileLandscapeView(isMobileLandscape());
         };
 
-        // Delay initial check until layout settles
-        const initialCheck = () => {
-            requestAnimationFrame(() => {
-                setTimeout(() => {
-                    updateView();
-                }, 100); // Wait a bit after paint
-            });
-        };
-
-        initialCheck(); // ✅ Run on load
+        updateView();
         window.addEventListener('resize', updateView);
         window.addEventListener('orientationchange', updateView);
 
@@ -34,8 +25,6 @@ export default function App() {
             window.removeEventListener('orientationchange', updateView);
         };
     }, []);
-
-
 
     return <FullConsole isMobileLandscape={isMobileLandscapeView} />;
 }

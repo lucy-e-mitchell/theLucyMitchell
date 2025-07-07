@@ -1,39 +1,21 @@
 html, body {
   margin: 0;
-  padding: 10px;
-  height: 100vh;
-  overflow: hidden;
   background-color: lightpink;
-  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-/* Scale + Center Wrapper */
-.ds-scale-wrapper {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  padding-top: 3vh;
-  padding-bottom: 3vh;
-  box-sizing: border-box;
-}
-
-/* Console */
 .ds-console {
-  width: 1200px;
-  min-width: 700px;
+  width: 800px;
   background-color: #c53030;
   border-radius: 16px;
   border: 8px solid #1a1a1a;
-  padding: 4rem;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-sizing: border-box;
   transform-origin: top left;
-  transition: transform 0.25s ease-in-out;
-  position: absolute;
 }
 
 /* Screens Layout */
@@ -42,46 +24,39 @@ html, body {
   display: flex;
   justify-content: center;
   width: 100%;
-  margin: 0 auto;
-  box-sizing: border-box;
+  margin: 10px;
+  align-items: center;
 }
 
 .ds-screen-wrapper {
-  margin-bottom: 1rem;
+  margin-bottom: 2px;
 }
 
 .ds-screen {
   background-color: #1a1a1a;
-  padding: 1.5rem;
+  padding: 8px;
   border-radius: 16px;
   width: 100%;
-  max-width: 600px;
-  box-sizing: border-box;
+  max-width: 400px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
 }
 
 .ds-screen-inner {
-  width: 600px;
-  max-width: 100%;
+  width: 400px;
   background-color: #fefefe;
-  padding: 1.5rem;
+  padding: 10px;
   border-radius: 12px;
   box-shadow: inset 0 0 8px #000;
-  min-height: 320px;
-  height: auto;
-  box-sizing: border-box;
+  height: 190px;
 }
 
 .ds-screen-inner.ds-bottom-screen-inner {
   background-color: #bc8593;
-  width: 600px;
-  height: 360px;
+  width: 400px;
+  height: 190px;
   max-height: 100%;
   overflow-y: auto;
-  padding: 1rem;
-  box-sizing: border-box;
 }
 
 .ds-screen-inner.ds-bottom-screen-inner::-webkit-scrollbar {
@@ -108,12 +83,11 @@ html, body {
 /* Divider */
 .ds-divider {
   height: 8px;
-  background-color: #000;
-  margin: 0.75rem 0;
+  background-color: black;
+  margin: 8px 0;
   border-radius: 4px;
-  box-shadow: inset 0 -2px 4px rgba(255, 255, 255, 0.1);
-  width: 100%;
-  box-sizing: border-box;
+  box-shadow: inset 0 -2px 4px darkslategrey;
+  width: 80%;
 }
 
 /* D-pad & Buttons */
@@ -121,9 +95,8 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  column-gap: 15px;
   width: 100%;
-  box-sizing: border-box;
 }
 
 .ds-dpad,
@@ -131,7 +104,6 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 360px;
 }
 
 .ds-dpad > div,
@@ -147,8 +119,8 @@ html, body {
 }
 
 .ds-dpad-button {
-  width: 36px;
-  height: 36px;
+  width: 25px;
+  height: 25px;
   background-color: #2d2d2d;
   border-radius: 4px;
   border: 2px solid #000;
@@ -162,8 +134,8 @@ html, body {
 .ds-dpad-button.center { grid-area: center; visibility: hidden; }
 
 .ds-ab-circle {
-  width: 42px;
-  height: 42px;
+  width: 25px;
+  height: 25px;
   background-color: #e53e3e;
   color: white;
   font-size: 16px;
@@ -188,7 +160,7 @@ html, body {
   text-align: center;
   font-size: 30px;
   color: #e53e3e;
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
   font-weight: bold;
 }
 
@@ -203,7 +175,7 @@ html, body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 15px;
   height: 100%;
   width: 100%;
   max-width: 500px;
@@ -211,8 +183,8 @@ html, body {
 }
 
 .ds-menu-item {
-  width: 120px;
-  height: 120px;
+  width: 80px;
+  height: 80px;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -221,22 +193,20 @@ html, body {
   font-size: 12px;
   font-weight: bold;
   text-align: center;
-  transition: transform 0.2s, border 0.2s;
 }
 
 .ds-menu-item.selected {
-  border: 10px solid #e53e3e;
+  border: 5px solid #e53e3e;
 }
 
 .ds-menu-icon {
-  width: 130px;
-  height: 130px;
+  width: 80px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: transparent;
   border: 1px solid transparent;
-  overflow: clip;
 }
 
 .ds-icon-img {
@@ -253,68 +223,41 @@ html, body {
 
 /* Content */
 .ds-section-title {
-  font-size: clamp(20px, 3vw, 24px);
+  font-size: 24px;
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
   font-weight: bold;
 }
 
 .ds-content {
-  font-size: clamp(16px, 2.5vw, 20px);
+  font-size: 20px;
   line-height: 1.8;
 }
 
 /* Avatar */
 .ds-avatar img {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   object-fit: scale-down;
   display: block;
-  margin: 0 auto 1rem;
+  margin: 0 auto 10px;
 }
 .ds-screen-inner.ds-bottom-screen-inner {
   background-color: #bc8593;
-  overflow-y: auto;              /* enable vertical scroll */
-  max-height: 320px;             /* fixed height for scroll container */
-  padding-right: 0.5rem;         /* make space for scrollbar */
-  scroll-behavior: smooth;       /* smooth scroll */
+  overflow-y: auto;
+  max-height: 320px;
 }
 
-/* Mobile-specific scale (not media, class based) */
-
+/* Mobile-specific scale*/
 
 .force-mobile-portrait {
-  transform: scale(0.85);
-  transform-origin: top center;
+  transform: scale(0.9);
+  transform-origin: top left;
 }
 
-.force-mobile-landscape .ds-console {
-  min-width: 680px;
-}
-
-.force-mobile-landscape .ds-screen-inner.ds-bottom-screen-inner {
-  width: 600px;
-  height: 360px;
-}
-
-.force-mobile-landscape .ds-menu-grid {
-  max-width: 500px;
-}
 .force-mobile-landscape {
-  position: fixed; /* ensures positioning is relative to the viewport */
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1.1);
-  transform-origin: center center;
-
-  /* Set a base width/height or max constraints */
-  max-width: 100vw;
-  max-height: 100vh;
-  width: auto;
-  height: auto;
-
-  /* Optional enhancements */
-  box-sizing: border-box;
-  z-index: 999; /* ensure it's on top if needed */
+  transform: scale(0.9);
+  transform-origin: top left;
 }
+
