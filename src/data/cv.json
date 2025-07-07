@@ -6,13 +6,14 @@
     "linkedin": "https://www.linkedin.com/in/lucy-mitchell-a39214234"
   },
   "summary": "Hi! I'm a passionate and curious software engineer with 4 years of hands-on experience in full-stack and backend development. I've been lucky to grow my skills through a graduate apprenticeship while studying Software Engineering at the University of Glasgow. I love building clean, scalable backend systems in Java, working with APIs and databases, and creating practical solutions that make a difference. I'm comfortable working across the stack with tools like Angular and SQL, and I enjoy collaborating in Agile teams, mentoring juniors, and continuously learning. I'm all about writing solid code, sharing ideas, and delivering value together.",
-  "education": {
-    "degree": "BSc (Hons) Software Engineering (First Class Honours)",
+  "education": [
+    {"qualification": "BSc (Hons) Software Engineering (First Class Honours)",
     "institution": "University of Glasgow",
     "location": "Glasgow, UK",
     "years": "2021 – 2025",
-    "notes": "Completed alongside full-time software engineering work as part of a graduate apprenticeship."
-  },
+      "notes": [
+        "Completed alongside full-time software engineering work as part of a graduate apprenticeship."
+      ]  }],
   "experience": [
     {
       "title": "Software Engineer (Graduate Apprentice)",

@@ -4,6 +4,7 @@ import './styles.css';
 
 const sections = [
     { label: "About Me", icon: "/icons/about.png" },
+    { label: "Education", icon: "/icons/education.png" },
     { label: "Experience", icon: "/icons/experience.png" },
     { label: "Projects", icon: "/icons/projects.png" },
     { label: "Contact", icon: "/icons/contact.png" }
@@ -62,7 +63,7 @@ export default function App() {
 
                 {/* Bottom Screen */}
                 <div className="ds-screen">
-                    <div className="ds-screen-inner">
+                    <div className="ds-screen-inner ds-bottom-screen-inner">
                         {inMenu ? (
                             <div className="ds-menu-grid">
                                 {sections.map((section, i) => (
@@ -101,6 +102,22 @@ export default function App() {
                                             ))}
                                         </div>
                                     )}
+                                    {currentSection === "Education" && (
+                                        <div>
+                                            {cvData.education.map((item, i) => (
+                                                <div key={i} style={{ marginBottom: '1rem' }}>
+                                                    <strong>{item.qualification}</strong><br />
+                                                    <span>{item.institution}, {item.location} ({item.years})</span>
+                                                    <ul>
+                                                        {item.notes.map((note, j) => (
+                                                            <li key={j}>{note}</li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    )}
+
                                     {currentSection === "Projects" && (
                                         <div>
                                             {cvData.projects.map((project, i) => (

@@ -26,6 +26,11 @@ body {
   margin: 0 auto;
   box-sizing: border-box;
 }
+.ds-screen-inner.ds-bottom-screen-inner {
+  background-color:
+          #bc8593; /* Change this to whatever you want */
+
+}
 
 .ds-screen-wrapper {
   margin-bottom: 1rem;
@@ -153,17 +158,17 @@ body {
 /* Menu items */
 .ds-menu-grid {
   display: flex;
-  justify-content: center;
+  justify-content: center;     /* horizontal centering */
+  align-items: center;         /* vertical centering */
+  flex-wrap: wrap;
   gap: 1.5rem;
-  flex-wrap: nowrap;
-  flex-direction: row;
+  height: 100%;
 }
 
 .ds-menu-item {
   width: 120px;
   height: 120px;
-  background-color: #f0f0f0;
-  border-radius: 12px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -171,25 +176,34 @@ body {
   font-size: 12px;
   font-weight: bold;
   text-align: center;
-  padding: 4px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   transition: transform 0.2s, border 0.2s;
 }
 
 .ds-menu-item.selected {
-  border: 2px solid #e53e3e;
-  transform: scale(1.1);
+  border: 4px solid #e53e3e;
 }
 
 .ds-menu-icon {
-  margin-bottom: 8px;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent; /* or add a soft background if needed */
+  border: 1px solid transparent; /* optional */
+  overflow: clip;
 }
+
 .ds-icon-img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
   image-rendering: pixelated;
 }
+
+
+
+
 
 
 .ds-menu-label {
@@ -219,6 +233,15 @@ body {
   object-fit: scale-down;
   display: block;
   margin: 0 auto 1rem;
+}
+
+.ds-screen-wrapper .ds-screen-inner {
+  background-image: url('public/top-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-shadow: 1px 1px 2px black;
 }
 
 /* ============================= */
