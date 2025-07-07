@@ -1,8 +1,8 @@
 /* Console wrapper */
 body {
   background-color: #2d2d2d;
-
 }
+
 .ds-console {
   background-color: #c53030;
   border-radius: 16px;
@@ -207,4 +207,56 @@ body {
   object-fit: scale-down;
   display: block;
   margin: 0 auto 1rem;
+}
+
+/* ============================= */
+/* 📱 Responsive Mobile Styles   */
+/* ============================= */
+@media (max-width: 768px) {
+  .ds-console {
+    padding: 1rem;
+    margin: 1rem;
+    max-width: 100%;
+  }
+
+  .ds-screen,
+  .ds-screen-inner {
+    padding: 1rem;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .ds-bottom-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .ds-dpad,
+  .ds-ab-cross {
+    height: auto;
+  }
+
+  .ds-menu-grid {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .ds-menu-item {
+    width: 100px;
+    height: 100px;
+    font-size: 10px;
+  }
+
+  .ds-header {
+    font-size: 16px;
+  }
+
+  .ds-section-title {
+    font-size: 18px;
+  }
+
+  .ds-content {
+    font-size: 13px;
+  }
 }
