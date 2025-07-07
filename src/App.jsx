@@ -3,10 +3,10 @@ import cvData from './data/cv.json';
 import './styles.css';
 
 const sections = [
-    { label: "About Me", icon: "🧑‍💻" },
-    { label: "Experience", icon: "🏢" },
-    { label: "Projects", icon: "💪" },
-    { label: "Contact", icon: "📬" }
+    { label: "About Me", icon: "/icons/about.png" },
+    { label: "Experience", icon: "/icons/experience.png" },
+    { label: "Projects", icon: "/icons/projects.png" },
+    { label: "Contact", icon: "/icons/contact.png" }
 ];
 
 export default function App() {
@@ -70,9 +70,15 @@ export default function App() {
                                         key={section.label}
                                         className={`ds-menu-item ${i === selectedIndex ? 'selected' : ''}`}
                                     >
-                                        <div className="ds-menu-icon">{section.icon}</div>
-                                        <div>{section.label}</div>
+                                        <div className="ds-menu-icon">
+                                            <img
+                                                src={section.icon}
+                                                alt={section.label}
+                                                className="ds-icon-img"
+                                            />
+                                        </div>
                                     </div>
+
                                 ))}
                             </div>
                         ) : (

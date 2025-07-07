@@ -182,9 +182,21 @@ body {
 }
 
 .ds-menu-icon {
-  font-size: 32px;
   margin-bottom: 8px;
 }
+.ds-icon-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+
+.ds-menu-label {
+  font-size: 12px;
+  text-align: center;
+}
+
 
 /* Section content */
 .ds-section-title {
