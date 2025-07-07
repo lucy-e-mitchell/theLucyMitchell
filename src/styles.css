@@ -1,23 +1,43 @@
-/* Console wrapper */
-body {
+
+html, body {
+  margin: 0;
+  padding: 10px;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
   background-color: #2d2d2d;
+  box-sizing: border-box;
 }
 
+/*Scale + Center Wrapper */
+.ds-scale-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+/* Console */
 .ds-console {
+  max-width: 1100px;
+  width: 100%;
   background-color: #c53030;
   border-radius: 16px;
   border: 8px solid #1a1a1a;
   padding: 4rem;
-  max-width: 1100px;
-  margin: 3vh auto;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
+
+  transform-origin: top left;
+  transition: transform 0.25s ease-in-out;
+  position: absolute;
 }
 
-/* Top and bottom screen layout */
+/* Screens Layout */
 .ds-screen-wrapper,
 .ds-bottom-container {
   display: flex;
@@ -25,11 +45,6 @@ body {
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
-}
-.ds-screen-inner.ds-bottom-screen-inner {
-  background-color:
-          #bc8593; /* Change this to whatever you want */
-
 }
 
 .ds-screen-wrapper {
@@ -58,7 +73,21 @@ body {
   box-sizing: border-box;
 }
 
-/* Divider line */
+.ds-screen-inner.ds-bottom-screen-inner {
+  background-color: #bc8593;
+}
+
+/* Background image */
+.ds-screen-wrapper .ds-screen-inner {
+  background-image: url('./top-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+
+/* Divider */
 .ds-divider {
   height: 8px;
   background-color: #000;
@@ -69,7 +98,7 @@ body {
   box-sizing: border-box;
 }
 
-/* Bottom container layout */
+/* D-pad & Buttons */
 .ds-bottom-container {
   display: flex;
   justify-content: center;
@@ -79,7 +108,6 @@ body {
   box-sizing: border-box;
 }
 
-/* D-pad and AB Cross */
 .ds-dpad,
 .ds-ab-cross {
   display: flex;
@@ -100,7 +128,6 @@ body {
   align-items: center;
 }
 
-/* D-pad buttons */
 .ds-dpad-button {
   width: 36px;
   height: 36px;
@@ -110,14 +137,12 @@ body {
   box-shadow: inset -2px -2px 4px rgba(0, 0, 0, 0.3);
   cursor: pointer;
 }
-
 .ds-dpad-button.up { grid-area: up; }
 .ds-dpad-button.down { grid-area: down; }
 .ds-dpad-button.left { grid-area: left; }
 .ds-dpad-button.right { grid-area: right; }
 .ds-dpad-button.center { grid-area: center; visibility: hidden; }
 
-/* A/B buttons */
 .ds-ab-circle {
   width: 42px;
   height: 42px;
@@ -131,8 +156,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
-  margin: 0;
   cursor: pointer;
 }
 
@@ -142,7 +165,7 @@ body {
 .ds-ab-cross > div .ds-ab-circle:nth-child(4) { grid-area: left; }
 .ds-ab-cross > div .ds-ab-circle:nth-child(5) { grid-area: right; }
 
-/* Header and preview */
+/* Header & Preview */
 .ds-header {
   text-align: center;
   font-size: 20px;
@@ -155,11 +178,11 @@ body {
   font-size: 14px;
 }
 
-/* Menu items */
+/* Menu */
 .ds-menu-grid {
   display: flex;
-  justify-content: center;     /* horizontal centering */
-  align-items: center;         /* vertical centering */
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 1.5rem;
   height: 100%;
@@ -180,7 +203,7 @@ body {
 }
 
 .ds-menu-item.selected {
-  border: 4px solid #e53e3e;
+  border: 10px solid #e53e3e;
 }
 
 .ds-menu-icon {
@@ -189,8 +212,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent; /* or add a soft background if needed */
-  border: 1px solid transparent; /* optional */
+  background-color: transparent;
+  border: 1px solid transparent;
   overflow: clip;
 }
 
@@ -201,18 +224,12 @@ body {
   image-rendering: pixelated;
 }
 
-
-
-
-
-
 .ds-menu-label {
   font-size: 12px;
   text-align: center;
 }
 
-
-/* Section content */
+/* Content */
 .ds-section-title {
   font-size: clamp(16px, 3vw, 22px);
   text-align: center;
@@ -225,7 +242,7 @@ body {
   line-height: 1.8;
 }
 
-/* Avatar image */
+/* Avatar */
 .ds-avatar img {
   width: 100px;
   height: 100px;
@@ -234,23 +251,19 @@ body {
   display: block;
   margin: 0 auto 1rem;
 }
-
-.ds-screen-wrapper .ds-screen-inner {
-  background-image: url('public/top-bg.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: white;
-  text-shadow: 1px 1px 2px black;
+.ds-screen-inner.ds-bottom-screen-inner {
+  background-color: #bc8593;
+  overflow-y: auto;              /* enable vertical scroll */
+  max-height: 320px;             /* fixed height for scroll container */
+  padding-right: 0.5rem;         /* make space for scrollbar */
+  scroll-behavior: smooth;       /* smooth scroll */
 }
 
-/* ============================= */
-/* 📱 Responsive Mobile Styles   */
-/* ============================= */
+
+/*  Mobile Styles */
 @media (max-width: 768px) {
   .ds-console {
     padding: 1rem;
-    margin: 1rem;
     max-width: 100%;
   }
 
@@ -271,12 +284,6 @@ body {
     height: auto;
   }
 
-  .ds-menu-grid {
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-  }
-
   .ds-menu-item {
     width: 100px;
     height: 100px;
@@ -293,5 +300,10 @@ body {
 
   .ds-content {
     font-size: 13px;
+  }
+
+  .ds-avatar img {
+    width: 80px;
+    height: 80px;
   }
 }

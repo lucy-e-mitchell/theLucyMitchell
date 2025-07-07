@@ -34,14 +34,15 @@ export default function App() {
     };
 
     return (
-        <div className="ds-console">
+        <div className="ds-console-wrapper">
+            <div className="ds-console">
             <div className="ds-screen-wrapper">
                 <div className="ds-screen">
                     <div className="ds-screen-inner">
                         <div className="ds-avatar">
                             <img src="/avatar.png" alt="Avatar of Lucy Mitchell" />
                         </div>
-                        <div className="ds-header">Lucy Mitchell DS CV</div>
+                        <div className="ds-header">Lucy Mitchell CV</div>
                         <p className="ds-preview">Use the bottom screen to explore my CV!</p>
                     </div>
                 </div>
@@ -156,6 +157,7 @@ export default function App() {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     );
 }
