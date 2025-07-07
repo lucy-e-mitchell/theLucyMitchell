@@ -104,7 +104,7 @@ html, body {
 
 /* Background image */
 .ds-screen-wrapper .ds-screen-inner {
-  background-image: url('./top-bg.png');
+  background-image: url('/top-bg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -269,8 +269,8 @@ html, body {
 
 /* Avatar */
 .ds-avatar img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: scale-down;
   display: block;
