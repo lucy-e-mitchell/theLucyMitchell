@@ -1,0 +1,65 @@
+{
+  "name": "Lucy Mitchell",
+  "contact": {
+    "phone": "07483824878",
+    "email": "lucymitchell574@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/lucy-mitchell-a39214234"
+  },
+  "summary": "Hi! I'm a passionate and curious software engineer with 4 years of hands-on experience in full-stack and backend development. I've been lucky to grow my skills through a graduate apprenticeship while studying Software Engineering at the University of Glasgow. I love building clean, scalable backend systems in Java, working with APIs and databases, and creating practical solutions that make a difference. I'm comfortable working across the stack with tools like Angular and SQL, and I enjoy collaborating in Agile teams, mentoring juniors, and continuously learning. I'm all about writing solid code, sharing ideas, and delivering value together.",
+  "education": {
+    "degree": "BSc (Hons) Software Engineering (First Class Honours)",
+    "institution": "University of Glasgow",
+    "location": "Glasgow, UK",
+    "years": "2021 – 2025",
+    "notes": "Completed alongside full-time software engineering work as part of a graduate apprenticeship."
+  },
+  "experience": [
+    {
+      "title": "Software Engineer (Graduate Apprentice)",
+      "company": "Barclays",
+      "location": "Glasgow, UK",
+      "years": "2021 – Present",
+      "responsibilities": [
+        "Designed and developed backend services using Java (incl. Spring Boot, Maven), supporting core internal tools across development teams.",
+        "Built and maintained RESTful APIs and data integration layers with SQL and Java, optimizing performance and maintainability.",
+        "Created frontends using Angular and TypeScript where required, ensuring cohesive full-stack functionality.",
+        "Implemented comprehensive test coverage using JUnit and integrated testing into CI pipelines.",
+        "Deployed containerized applications using Kubernetes within CI/CD workflows.",
+        "Participated in Agile delivery cycles and mentored junior developers on team processes and engineering best practices."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Test Environment Dashboard",
+      "details": [
+        "Developed backend logic in Java and SQL to aggregate and expose test environment data via APIs.",
+        "Built a simple frontend using Angular for visual representation, focusing on backend-first architecture.",
+        "Integrated multiple third-party systems using both RESTful and SOAP APIs."
+      ]
+    },
+    {
+      "title": "Automated Test Double Tool",
+      "details": [
+        "Led development of a backend system to simulate responses from dependent services, reducing test complexity.",
+        "Built API services in Java with REST endpoints; frontend was added using Angular and TypeScript.",
+        "Integrated with automation frameworks for continuous testing use cases."
+      ]
+    },
+    {
+      "title": "Mentorship & Onboarding",
+      "details": [
+        "Provided technical onboarding, code reviews, and guidance to junior team members, improving team productivity and cohesion."
+      ]
+    }
+  ],
+  "skills": {
+    "languages": ["Java", "SQL", "TypeScript", "HTML/CSS", "Avaloq Script"],
+    "backend": ["RESTful APIs", "SOAP", "Java services"],
+    "frontend": ["Angular", "TypeScript"],
+    "testing": ["JUnit", "Integration Testing", "Test Doubles"],
+    "tools": ["Maven", "Git", "Kubernetes", "Grafana", "Jira", "CI/CD pipelines"],
+    "practices": ["Agile (Scrum)", "Clean Code", "Code Reviews", "Mentorship"],
+    "softSkills": ["Team collaboration", "Communication", "Problem-solving", "Leadership"]
+  }
+}
