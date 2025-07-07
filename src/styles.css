@@ -5,7 +5,7 @@ html, body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-color: #2d2d2d;
+  background-color: pink;
   box-sizing: border-box;
 }
 
@@ -104,7 +104,7 @@ html, body {
 
 /* Background image */
 .ds-screen-wrapper .ds-screen-inner {
-  background-image: url('./top-bg.png');
+  background-image: url('/top-bg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -269,8 +269,8 @@ html, body {
 
 /* Avatar */
 .ds-avatar img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: scale-down;
   display: block;
@@ -284,51 +284,76 @@ html, body {
   scroll-behavior: smooth;       /* smooth scroll */
 }
 
-
-/*  Mobile Styles */
-@media (max-width: 768px) {
-  .ds-console {
-    padding: 1rem;
-    max-width: 100%;
-  }
-
-  .ds-screen,
-  .ds-screen-inner {
-    padding: 1rem;
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .ds-bottom-container {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .ds-dpad,
-  .ds-ab-cross {
-    height: auto;
-  }
-
-  .ds-menu-item {
-    width: 100px;
-    height: 100px;
-    font-size: 10px;
-  }
-
-  .ds-header {
-    font-size: 16px;
-  }
-
-  .ds-section-title {
-    font-size: 18px;
-  }
-
-  .ds-content {
-    font-size: 13px;
-  }
-
-  .ds-avatar img {
-    width: 80px;
-    height: 80px;
-  }
+.landscape-warning {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1a1a1a;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: bold;
+  display: none; /* hidden by default */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  box-sizing: border-box;
 }
+
+.landscape-warning.show {
+  display: flex;
+}
+/* Mobile landscape layout */
+.mobile-landscape-wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  color: #fff;
+  height: 100vh;
+  overflow: hidden;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.mobile-nav {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+
+.mobile-nav button {
+  background: #333;
+  border: none;
+  color: white;
+  padding: 0.5rem;
+  font-size: 12px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.mobile-nav img {
+  width: 50px;
+  height: 50px;
+}
+
+.mobile-content {
+  overflow-y: auto;
+  flex-grow: 1;
+  background: #111;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
