@@ -19,7 +19,8 @@ function scaleToFit() {
     const scaleX = vw / elW;
     const scaleY = vh / elH;
 
-    const scale = Math.min(scaleX, scaleY, 1); // Don't upscale
+    const scale = Math.min(scaleX, scaleY, 0.6);
+
 
     el.style.transform = `scale(${scale})`;
     el.style.position = 'absolute';

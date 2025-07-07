@@ -15,7 +15,13 @@ html, body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+
+  /* Add even top and bottom space */
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  box-sizing: border-box;
 }
+
 
 
 /* Console */
@@ -75,7 +81,26 @@ html, body {
 
 .ds-screen-inner.ds-bottom-screen-inner {
   background-color: #bc8593;
+  overflow-y: auto;
+  max-height: 320px;
+  padding: 1.5rem 1rem;           /* padding: top/bottom 1.5rem, sides 1rem */
+  padding-bottom: 2rem;          /* extra space below */
+  scroll-behavior: smooth;
+  box-sizing: border-box;
 }
+
+/* Optional: custom scrollbar styling (modern browsers) */
+.ds-screen-inner.ds-bottom-screen-inner::-webkit-scrollbar {
+  width: 8px;
+}
+.ds-screen-inner.ds-bottom-screen-inner::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+.ds-screen-inner.ds-bottom-screen-inner::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 
 /* Background image */
 .ds-screen-wrapper .ds-screen-inner {
