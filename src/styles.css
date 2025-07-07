@@ -194,7 +194,7 @@ html, body {
 
 .ds-preview {
   text-align: center;
-  font-size: 14px;
+  font-size: 20px;
 }
 
 /* Menu */
@@ -253,14 +253,14 @@ html, body {
 
 /* Content */
 .ds-section-title {
-  font-size: clamp(16px, 3vw, 22px);
+  font-size: clamp(20px, 3vw, 24px);
   text-align: center;
   margin-bottom: 1rem;
   font-weight: bold;
 }
 
 .ds-content {
-  font-size: clamp(12px, 2.5vw, 14px);
+  font-size: clamp(16px, 2.5vw, 20px);
   line-height: 1.8;
 }
 
@@ -302,11 +302,19 @@ html, body {
   max-width: 500px;
 }
 .force-mobile-landscape {
-  position: absolute;
+  position: fixed; /* ensures positioning is relative to the viewport */
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1.1); /* Scale + perfect center */
+  transform: translate(-50%, -50%) scale(1.1);
   transform-origin: center center;
-  height: auto;
+
+  /* Set a base width/height or max constraints */
+  max-width: 100vw;
+  max-height: 100vh;
   width: auto;
+  height: auto;
+
+  /* Optional enhancements */
+  box-sizing: border-box;
+  z-index: 999; /* ensure it's on top if needed */
 }
