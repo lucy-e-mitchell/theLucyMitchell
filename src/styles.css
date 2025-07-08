@@ -138,7 +138,7 @@ html, body {
   height: 25px;
   background-color: #e53e3e;
   color: white;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   border-radius: 50%;
   border: 2px solid #000;
@@ -158,7 +158,7 @@ html, body {
 /* Header & Preview */
 .ds-header {
   text-align: center;
-  font-size: 30px;
+  font-size: 24px;
   color: #e53e3e;
   margin-bottom: 10px;
   font-weight: bold;
@@ -166,7 +166,7 @@ html, body {
 
 .ds-preview {
   text-align: center;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 /* Menu */
@@ -190,9 +190,6 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: 12px;
-  font-weight: bold;
-  text-align: center;
 }
 
 .ds-menu-item.selected {
@@ -216,21 +213,17 @@ html, body {
   image-rendering: pixelated;
 }
 
-.ds-menu-label {
-  font-size: 12px;
-  text-align: center;
-}
 
 /* Content */
 .ds-section-title {
-  font-size: 24px;
+  font-size: 20px;
   text-align: center;
   margin-bottom: 10px;
   font-weight: bold;
 }
 
 .ds-content {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.8;
 }
 
@@ -251,13 +244,8 @@ html, body {
 
 /* Mobile-specific scale*/
 
-.force-mobile-portrait {
-  transform: scale(0.9);
-  transform-origin: top left;
-}
-
 .force-mobile-landscape {
-  transform: scale(0.9);
-  transform-origin: top left;
+  transform: scale(0.7);
+  transform-origin: top center;
 }
 

@@ -25,7 +25,7 @@
         "Built and maintained RESTful APIs and data integration layers with SQL and Java, optimizing performance and maintainability.",
         "Created frontends using Angular and TypeScript where required, ensuring cohesive full-stack functionality.",
         "Implemented comprehensive test coverage using JUnit and integrated testing into CI pipelines.",
-        "Deployed containerized applications using Kubernetes within CI/CD workflows.",
+        "Deployed containerised applications using Kubernetes within CI/CD workflows.",
         "Participated in Agile delivery cycles and mentored junior developers on team processes and engineering best practices."
       ]
     }
@@ -42,8 +42,8 @@
     {
       "title": "Automated Test Double Tool [Workplace]",
       "details": [
-        "Led development of a backend system to simulate responses from dependent services, reducing test complexity.",
-        "Built API services in Java with REST endpoints; frontend was added using Angular and TypeScript.",
+        "Contributed  development of a backend system to simulate responses from dependent services, reducing test complexity.",
+        "Built API services in Java with REST endpoints; Independantly developed the front end from scretch using Angular and TypeScript.",
         "Integrated with automation frameworks for continuous testing use cases."
       ]
     },

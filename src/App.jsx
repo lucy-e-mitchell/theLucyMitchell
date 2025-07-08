@@ -26,5 +26,21 @@ export default function App() {
         };
     }, []);
 
+    if (!isMobileLandscapeView && /Mobi|Android/i.test(navigator.userAgent)) {
+        return (
+            <div style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                height: '100vh',
+                textAlign: 'center',
+                padding: '2rem',
+                fontSize: '1.5rem'
+            }}>
+                Please rotate your phone to landscape mode.
+            </div>
+        );
+    }
+
     return <FullConsole isMobileLandscape={isMobileLandscapeView} />;
 }
