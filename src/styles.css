@@ -137,8 +137,9 @@ html, body {
   width: 25px;
   height: 25px;
   background-color: #e53e3e;
-  color: white;
+  color: rgba(36, 36, 38, 0.94);
   font-size: 14px;
+  font-family: 'Pacifico', cursive;
   font-weight: bold;
   border-radius: 50%;
   border: 2px solid #000;
