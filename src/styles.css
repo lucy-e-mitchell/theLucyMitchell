@@ -171,16 +171,21 @@ html, body {
 
 /* Menu */
 .ds-menu-grid {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  /* turn off flex, turn on grid */
+  display: grid;
+
+  /* 3 columns, rows auto as needed (you’ll get 2 rows with 6 items) */
+  grid-template-columns: repeat(3, 1fr);
   gap: 15px;
-  height: 100%;
+
+  /* center the whole grid block inside the screen */
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
+  align-content: center;   /* vertical centering of the tracks */
+  justify-items: center;   /* center items inside each cell */
 }
+
 
 .ds-menu-item {
   width: 80px;

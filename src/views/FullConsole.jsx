@@ -36,17 +36,44 @@ export default function FullConsole({ isMobileLandscape }) {
         if (scrollRef.current) scrollRef.current.scrollTop = 0;
     };
 
-    const handleDown = () => {
-        if (!inMenu && scrollRef.current) {
-            scrollRef.current.scrollBy({ top: 60, behavior: 'smooth' });
+    const COLS = 3; // 3 across
+
+    const handleUp = () => {
+        if (inMenu) {
+            setSelectedIndex((prev) => {
+                // move up a row (subtract 3)
+                let next = prev - COLS;
+                if (next < 0) {
+                    // wrap to last possible row
+                    next = prev + COLS * (Math.ceil(sections.length / COLS) - 1);
+                    if (next >= sections.length) {
+                        // if wrapped row is incomplete, land on last item
+                        next = sections.length - 1;
+                    }
+                }
+                return next;
+            });
+        } else if (scrollRef.current) {
+            scrollRef.current.scrollBy({ top: -60, behavior: "smooth" });
         }
     };
 
-    const handleUp = () => {
-        if (!inMenu && scrollRef.current) {
-            scrollRef.current.scrollBy({ top: -60, behavior: 'smooth' });
+    const handleDown = () => {
+        if (inMenu) {
+            setSelectedIndex((prev) => {
+                // move down a row (add 3)
+                let next = prev + COLS;
+                if (next >= sections.length) {
+                    // wrap back to same column in first row
+                    next = prev % COLS;
+                }
+                return next;
+            });
+        } else if (scrollRef.current) {
+            scrollRef.current.scrollBy({ top: 60, behavior: "smooth" });
         }
     };
+
 
     useEffect(() => {
         const onKeyDown = (e) => {
@@ -96,22 +123,28 @@ export default function FullConsole({ isMobileLandscape }) {
                 <div className="ds-screen">
                     <div className="ds-screen-inner ds-bottom-screen-inner" ref={scrollRef}>
                         {inMenu ? (
-                            <div className="ds-menu-grid">
-                                {sections.map((section, i) => (
-                                    <div
-                                        key={section.label}
-                                        className={`ds-menu-item ${i === selectedIndex ? 'selected' : ''}`}
-                                    >
-                                        <div className="ds-menu-icon">
-                                            <img
-                                                src={section.icon}
-                                                alt={section.label}
-                                                className="ds-icon-img"
-                                            />
+                                <div className="ds-menu-grid">
+                                    {sections.map((section, i) => (
+                                        <div
+                                            key={section.label}
+                                            className={`ds-menu-item ${i === selectedIndex ? "selected" : ""}`}
+                                            onClick={() => {
+                                                setSelectedIndex(i);
+                                                setCurrentSection(section.label);
+                                                setInMenu(false);
+                                            }}
+                                            style={{ cursor: "pointer" }}
+                                        >
+                                            <div className="ds-menu-icon">
+                                                <img
+                                                    src={section.icon}
+                                                    alt={section.label}
+                                                    className="ds-icon-img"
+                                                />
+                                            </div>
                                         </div>
-                                    </div>
-                                ))}
-                            </div>
+                                    ))}
+                                </div>
                         ) : (
                             <>
                                 <h2 className="ds-section-title">{currentSection}</h2>
